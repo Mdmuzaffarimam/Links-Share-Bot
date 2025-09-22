@@ -6,19 +6,19 @@ from logging.handlers import RotatingFileHandler
 
 # Recommended
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
-APP_ID = int(os.environ.get("APP_ID", ""))
-API_HASH = os.environ.get("API_HASH", "")
+APP_ID = int(os.environ.get("APP_ID", "23631217"))
+API_HASH = os.environ.get("API_HASH", "567c6df308dc6901790309499f729d12")
 
 # Main
-OWNER_ID = int(os.environ.get("OWNER_ID", "6497757690"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "6139759254"))
 PORT = os.environ.get("PORT", "8080")
 
 # Database
-DB_URI = os.environ.get("DB_URI", "")
-DB_NAME = os.environ.get("DB_NAME", "link")
+DB_URI = os.environ.get("DB_URI", "rupper175")
+DB_NAME = os.environ.get("DB_NAME", "mongodb+srv://rupper175:rupper175@cluster0.imf09ca.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 #Auto approve 
-CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '').split()] # dont change anything 
+CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '-1002528229701').split()] # dont change anything 
 TEXT = environ.get("APPROVED_WELCOME_TEXT", "<b>{mention},\n\nʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ {title} ɪs ᴀᴘᴘʀᴏᴠᴇᴅ.\n\‣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @Codeflix_Bots</b>")
 APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 
@@ -56,13 +56,13 @@ BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "⚠️ ғᴜᴄᴋ ʏᴏᴜ, ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴍʏ ᴍᴀsᴛᴇʀ. ɢᴏ ᴀᴡᴀʏ, ʙɪᴛᴄʜ 🙃!"
 
 # Logging
-LOG_FILE_NAME = "links-sharingbot.txt"
-DATABASE_CHANNEL = int(os.environ.get("DATABASE_CHANNEL", "")) # Channel where user links are stored
+LOG_FILE_NAME = "File-Sharing-Bot"
+DATABASE_CHANNEL = int(os.environ.get("DATABASE_CHANNEL", "-1002338165303")) # Channel where user links are stored
 #--- ---- ---- --- --- --- - -- -  - - - - - - - - - - - --  - -
 
 try:
     ADMINS = []
-    for x in (os.environ.get("ADMINS", "6497757690").split()):
+    for x in (os.environ.get("ADMINS", "6139759254 7473323779").split()):
         ADMINS.append(int(x))
 except ValueError:
     raise Exception("Your Admins list does not contain valid integers.")
