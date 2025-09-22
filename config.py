@@ -18,7 +18,7 @@ DB_URI = os.environ.get("DB_URI", "rupper175")
 DB_NAME = os.environ.get("DB_NAME", "mongodb+srv://rupper175:rupper175@cluster0.imf09ca.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 #Auto approve 
-CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '-1002528229701').split()] # dont change anything 
+CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '').split()] # dont change anything 
 TEXT = environ.get("APPROVED_WELCOME_TEXT", "<b>{mention},\n\nʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ ᴛᴏ ᴊᴏɪɴ {title} ɪs ᴀᴘᴘʀᴏᴠᴇᴅ.\n\‣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @Codeflix_Bots</b>")
 APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 
